@@ -17,7 +17,8 @@ h1{
 ul{
     list-style: none;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 li{
     padding: 5px 0;
