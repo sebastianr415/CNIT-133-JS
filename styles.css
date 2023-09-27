@@ -42,3 +42,24 @@ label {
 input {
     display: table-cell;
 }
+#fred{
+    height: 350px;
+    width: 350px;
+}
+
+/* homework section css */
+
+form {
+    display:flex;
+    flex-direction:column
+}
+/* homework 3 css */
+/* label{
+    padding-top:5rem;
+} */
+.sellerName{
+    margin: 5rem;
+}
+.paragrapgh{
+    padding:2rem;
+}

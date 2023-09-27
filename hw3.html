@@ -1,19 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Homework 3 for JavaScript, jQuery, AJAX course at CCSF">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>JS-HW3</title>
 </head>
 <body>
-    <h1>coming soon!!</h1>
+    <h1>Student Grades</h1>
     <ul>
         <li><a href="index.html">home</a></li>
     </ul>
-    
+
+    <form>
+        <label for = "hwAvg"> Homework Average 
+            <input type = "number" id = "hwAvg" >
+        </label>
+        <label for = "midExam"> Mid Term exam score
+            <input  type = "number" id = "midExam">
+        </label>
+        <label for = "finalExam"> Final exam Score
+            <input type = "number" id = "finalExam" >
+        </label>
+        <label for = "participation"> Participation points
+            <input type = "number" id = "participation">
+        </label>
+        <div id = "errorMsg"></div>
+
+        <button type = "button"  onclick = "submitForm()">SUBMIT</button>
+        <button type = "button" onclick = "window.location.reload()">RESET</button>
+        <textarea id = "result"></textarea>
+    </form>
+
+
+
+<!--Section one  -->
+<form id="hw3-Form">
+    <fieldset>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <h1>Homework 3 - part2</h1>
+    <label id = "sellerName">seller's Name :
+        <input type = text id = "name" title = "Please make sure that the salesperson's name is spelled correctly">
+    </label>
+    <p class = "paragraph">For each item type the quantity sold by the seller</p>
+    <label>Item 1 : 
+        <input type = number>
+    </label><br>
+    <label>Item 2 : 
+        <input type = number>
+    </label><br>
+    <label>Item 3 :
+        <input type = number>
+    </label><br>
+    <label>Item 4 :
+        <input type = number>
+    </label><br>
+    </fieldset>
+</form>
+
+
+
+
+</table>
+    <button type = button>Sumbit</button>
+    <button type = button>Clear Form</button>
+    <form method = "GET" id ="my_form"></form>
+    <table>
+
+        <tr>
+            <th>Item#</th>
+            <th>Price</th>
+            <th>Qty Sold</th>
+            <th>Total $</th>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>$20.99</td>
+            <textarea name  = "qtysold"></textarea>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>$12.75</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>$9.95</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>$35.89</td>
+        </tr>
+        <tr>
+            <td>Total Amount Sold </td>
+        </tr>
+        <tr>
+            <td>Total Weekly Earnings</td>
+        </tr>
+    </table>
+
+    <script>
+        // Homework section
+
+    // global variables 
+    // var greaterNum = "your numbers are greater than 100"
+    // var success = "Your inputs is a go "
+    // var noLessORGreater = "Your inputs cant be bellow 0 or above 100"
+    // var notANumber = "Input numbers between 0 and 100"
+    // var success = "inputs completed"
+    // var failed = "retake course"
+
+
+    function checkValidation(input){
+        if(isNaN(input)){
+            return false
+        } else if (input < 0 || input > 100)
+            return false
+        else if (input == ""){
+            return false 
+        }
+        else {return true}
+    }  
+
+    function calfinalAverage (hwAvg, midExam, finalExam, participation){
+        return finalAverage = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * participation)
+    }
+
+    function display (finalAverage){
+        finalAverage = Math.round(finalAverage)
+
+        let grades;
+        if(finalAverage >= 90){
+            grades = a
+        } else if (finalAverage >= 80){
+            grades = b
+        } else if (finalAverage >= 70){
+            grades = c
+        } else if (finalAverage >= 60){
+            grades = failed
+        } else (finalAverage >= 50 || finalAverage < 50)
+            grades = failed
+        
+        const output = document.getElementById("result")
+        output.innerHTML = `Final Average: ${finalAverage}\nGrade: ${grades}`
+    }
+
+    function submitForm(){
+        const hwAvgInput = document.getElementById("hwAvg");
+        const hwAvg = hwAvgInput.value;
+
+        const midExamInput = document.getElementById("midExam");
+        const midExam = midExamInput.value;
+
+        const finalExamInput = document.getElementById("finalExam");
+        const finalExam = finalExamInput.value;
+
+        const participationInput = document.getElementById("participation");
+        const participation = participationInput.value;
+        
+    if (checkValidation(hwAvg) && checkValidation(midExam) && checkValidation(finalExam) && checkValidation(participation)){
+        const finalAverage = calfinalAverage(hwAvg, midExam, finalExam, participation)
+        display(finalAverage)
+    } else {
+        const output = document.getElementById("errorMsg");
+        output.innerHTML = "Please enter valid input.";    
+    }}
+
+
+$( function() {
+    var tooltips = $( "[title]" ).tooltip({
+        position: {
+        my: "center bottom-20",
+        at: "center top",
+        collision: "none"
+        }
+    });
+});
+
+
+//     <!-- part 2 -->
+//         <!-- <h1>Objects in JavaScript</h1>
+//         <img src="img/image-building.jpg" alt="just an image" id="fred"> 
+//         <img src = "img/image-building.jpg" alt = "just the image" id = "fred2" width ="400px" height ="350px">
+//         <img src = "img/single-building.jpg" alt = "one building" id="fred3" width ="400px" height ="350px">
+//         <br> -->
+
+//         <!-- eventhandler -->
+
+//         <!-- mouseon mouseover example -->
+//         <!-- <a href = "#" onmouseover = "alert('bye')">onemouseover Event</a><br>
+//         <a href="#" onmouseout = "alert('welcome back')">onmouseout Event</a> -->
+//         <!-- <br> -->
+//         <!-- <h1>This is an event handler example </h1>
+//         <img onmouseover = "ouseImg()" onmouseout = "normalImg()" id = "build" src = "img/single-building.jpg" alt="pictures" width ="400px" height ="350px"> -->
+            
+//         <!-- onchange example -->
+//         <!-- <form>
+//     <select name="testPulldown" onchange="alert('You changed me');">
+//     <option value="1">First Choice</option>
+//     <option value="2">Second Choice</option>
+//     <option value="3">Third Choice</option>
+//     </select>
+//         </form> -->
+
+//         <!-- global and local variable -->
+
+//         <!-- <p><a href="#" onclick = "doStuff()">Calling dostuff()</a></p><br>
+
+//         <p><a href="#" onclick = "doSomethingElse()">Calling doSomethingElse()</a></p> -->
+//         <!-- is NOT A NUMBER  example -->
+//         <!-- <form action="#" method="get">
+// <label for="num1">First Number</label><br>
+// <input type="number" id="num1" name="num1"><br><br> -->
+// <!-- <label for="num2">Second Number</label><br>
+// <input type="number" id="num2" name="num2"><br><br> -->
+// <!-- <input type="submit" value="Add Numbers" onclick="integer();">
+// </form> -->
+        // function steeringWheel (){
+        //     directions:"left" || "right";
+        //     honk()
+        // }
+        // var theWheel = new steeringWheel()
+        // var theSecondWheel = new steerignWheel()
+        
+        // theWheel.directions = "left"
+        // theSecondWheel = "center";
+        // theWheel.honk()
+
+
+        // part 2 
+    // var pic1 = new Image();
+    // var pic2 = new Image();
+    // pic1.src = "img/multi-building.jpg";    
+    // document.getElementById("fred").src = pic1.src;
+
+    // // passing arguments to the image object constructor
+    // var pic3 = new Image(5,5)
+    // pic3.src = "img/image-building.jpg"
+    // document.getElementById("fred3").src = pic3.src
+    // var myWidth = pic3.width
+    // var myHeight = pic3.height
+    // console.log(myWidth,myHeight)
+
+    // passing varibles into a method
+        // var myHornSound = "duskus let go "
+        // var theWheel = new SteeringWheel();
+
+        // theWheel.horn(myHornSound)
+        //thewheel object uses the horn method and inside the method is the variable that plays the song duskus let go
+        
+        //Event handler 
+        //  function mouseImg() {
+        //     document.getElementById("build").src = "img/multi-building.jpg"
+        //  }
+        //  function normalImg(){
+        //     document.getElementById("build").src = "img/single-building.jpg"
+        //  }
+
+        //  global & variable examples
+
+        //  var george = 1
+        //  var fred = "hi"
+
+        //  function doStuff(){
+        //     alert(george)
+        //     george = "boo"
+        //     fred = "howl"
+        //  }
+
+        // function doSomethingElse(){
+        //     alert(fred)
+        //     var george = "yum"
+        //     var fred = "Delicious!"
+        // }
+
+        // declaring varible with var 
+        // function declare() {
+        //     for(var i = 0; i <10; i++){
+        //         console.log(i)
+        //     }
+        // }
+        // declare();
+        // console.log(i)
+
+        // declaring let varible 
+        // for(let i=0; i<10;i++){
+        //     console.log(i)
+        // }
+        // console.log(i)
+
+        //const keyword variable
+        //  const multi = 10;
+        // //  multi = 5; // adding a new value to a const keyword will catch an error
+        // [23,56,66].map((num) => num * multi)
+
+        // const boy = {
+        //     age: 19
+        // }
+        // boy.age = 20
+        // console.log(boy)
+
+        //return example
+        // function doStuff(){
+        //     var myNumberOfCats = 4
+        //     var myNumberDogs = 2
+
+        //     var myTotalNumberOfPets = addMe (myNumberOfCats,myNumberDogs)
+        //     alert(myTotalNumberOfPets)
+        // }
+        //             function addMe(myFirstNum,mySecondNum){
+        //         var myAnswer = myFirstNum + mySecondNum
+        //         return myAnswer
+        //     }
+
+        // is NotANumber example
+//         function addNumbers() {
+// let n1 = document.getElementById("num1").value;
+// let n2 = document.getElementById("num2").value;
+// let number1 = parseInt(n1)
+// let number2 = parseInt(n2)
+// let total = number1 + number2;
+// alert(total);
+// }
+
+
+    //parseInterger examples
+
+    // function integer(){
+    // let n1 = document.getElementById("num1").value;
+    // let number1 = parseInt(n1)
+    // let total = number1 ;
+    // alert(total);
+    // }
+
+
+    //charAt() example
+// let str = "San Francisco"
+
+// alert("First charcter: " + str.charAt(0))
+// alert("last Character: " + str.charAt(12))
+    </script>
 </body>
 </html>
