@@ -5,10 +5,12 @@
     <meta name="description" content="Homework 3 for JavaScript, jQuery, AJAX course at CCSF">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">                      
     <title>JS-HW3</title>
 </head>
 <body>
@@ -64,10 +66,6 @@
     </fieldset>
 </form>
 
-
-
-
-</table>
     <button type = button>Sumbit</button>
     <button type = button>Clear Form</button>
     <form method = "GET" id ="my_form"></form>
@@ -109,12 +107,12 @@
         // Homework section
 
     // global variables 
-    // var greaterNum = "your numbers are greater than 100"
-    // var success = "Your inputs is a go "
-    // var noLessORGreater = "Your inputs cant be bellow 0 or above 100"
-    // var notANumber = "Input numbers between 0 and 100"
-    // var success = "inputs completed"
-    // var failed = "retake course"
+    var greaterNum = "your numbers are greater than 100"
+    var success = "Your inputs is a go "
+    var noLessORGreater = "Your inputs cant be bellow 0 or above 100"
+    var notANumber = "Input numbers between 0 and 100"
+    var success = "inputs completed"
+    var failed = "retake course"
 
 
     function checkValidation(input){
@@ -171,6 +169,9 @@
         const output = document.getElementById("errorMsg");
         output.innerHTML = "Please enter valid input.";    
     }}
+
+
+
 
 
 $( function() {

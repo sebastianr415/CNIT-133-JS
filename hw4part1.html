@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+<h1>CNIT 133 Homework 4 - looping statments</h1>
+    <ul>
+        <li><a href="index.html">home</a></li>
+    </ul>
+
+        <a href = "#">Part One of CNIT 133 Homework 4 Looping Statement</a>
+            <br>
+        <a href = "#">Part Two of CNIT 133 Homework 4 Looping Statement</a>
+
+    <div id = "display"></div>
+<div id = "display2"></div>
+
+    <!-- javascript begins for part one-->
+    <script>
+let x = 0
+let x2 = 3
+
+let sum = 0
+let sum2 = 1
+let sumM = 1
+let sumWhile = 0
+
+// for of loop 
+for (var number = 5;number <= 25; number += 4){
+  sum += number
+}
+for (var number2 = 5; number2 <= 25; number2 += 4){
+  // sum2 *= number2
+  sum2 = number2 * sum2
+} 
+let fn = sum2.toLocaleString()
+// while loop
+while (x2 <= 18){
+  sumM = x2 * sumM
+  x2 = x2 + 3
+}
+let fn1 = sumM.toLocaleString();
+
+while(x <= 18){
+  sumWhile = sumWhile + x
+   x = x + 3
+}
+// console.log(fn)
+document.getElementById("display").innerHTML = `
+The result of 5 * 9 * 13 * 17 * 21 * 25 is ${fn}
+The result of 5 + 9 + 13 + 17 + 21 + 25 is ${sum}`
+document.getElementById("display2").innerHTML = `The result of 3 * 6 * 9 * 12 * 15 * 18 is ${fn1}
+The result of 3 + 6 + 9 + 12 + 15 + 18 is ${sumWhile}`
+
+// example from notes 
+// var x = 0 
+// var sum = 0 
+//  while (x < 10){ 
+//    x = 1 + x
+//    sum = x + sum
+//  console.log(x,sum)
+//  }
+
+    </script>
+</body>
+</html>
