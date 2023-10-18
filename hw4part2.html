@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>HW4 part2</title>
+  </head>
+
+<body>
+<h1>Learn about compound interest</h1>
+    <div id="theTable"></div>
+
+<script>
+// write a script to show 3 tables with calculation of compound interest on a principal of $1000;
+var outputHtml = "";
+var p = 1000
+    
+for(r = 5; r <= 7;r++){
+    outputHtml += "<table><tr><th>Year</th><th>Amount on deposit</th><th>Interest Rate</th></tr>"
+    let amount = 1000;
+    
+for(var n = 1; n <= 5; n++){
+    let percent = r  / 100 // changes the interest rate to percentage
+    amount = amount * (1 + percent),n;
+    var amountDollar = amount.toLocaleString("en-US", {style: "currency", currency: "USD"});
+    outputHtml += "<tr><td>" + n + "<td> " + amountDollar + "</td><td> " + r +"</td></tr>"
+    }
+}
+outputHtml += "</table>"
+document.getElementById("theTable").innerHTML = outputHtml;
+</script>
+</body>
+</html>

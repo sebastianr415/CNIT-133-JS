@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
@@ -14,12 +17,17 @@
         <li><a href="index.html">home</a></li>
     </ul>
 
-        <a href = "#">Part One of CNIT 133 Homework 4 Looping Statement</a>
+        <a href = "hw4part1.html">Part One of CNIT 133 Homework 4 Looping Statement</a>
             <br>
         <a href = "#">Part Two of CNIT 133 Homework 4 Looping Statement</a>
 
     <div id = "display"></div>
 <div id = "display2"></div>
+
+<!-- draggable object -->
+<div id = draggable class = "ui-widget-content">
+    <p>click on me and drag me</p>
+</div>
 
     <!-- javascript begins for part one-->
     <script>
@@ -66,7 +74,10 @@ The result of 3 + 6 + 9 + 12 + 15 + 18 is ${sumWhile}`
 //    sum = x + sum
 //  console.log(x,sum)
 //  }
-
+// jquery ui draggable object
+$(function(){
+    $("#draggable").draggable();
+})
     </script>
 </body>
 </html>
