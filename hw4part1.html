@@ -13,15 +13,15 @@
 </head>
 <body>
 <h1>CNIT 133 Homework 4 - looping statments</h1>
-    <ul>
-        <li><a href="index.html">home</a></li>
-    </ul>
+<ul>
+    <li><a href="index.html">home</a></li>
+</ul>
 
-        <a href = "hw4part1.html">Part One of CNIT 133 Homework 4 Looping Statement</a>
-            <br>
-        <a href = "#">Part Two of CNIT 133 Homework 4 Looping Statement</a>
+<a href = "hw4part1.html">Part One of CNIT 133 Homework 4 Looping Statement</a>
+    <br>
+<a href = "hw4part2.html">Part Two of CNIT 133 Homework 4 Looping Statement</a>
 
-    <div id = "display"></div>
+<div id = "display"></div>
 <div id = "display2"></div>
 
 <!-- draggable object -->
@@ -30,7 +30,7 @@
 </div>
 
     <!-- javascript begins for part one-->
-    <script>
+<script>
 let x = 0
 let x2 = 3
 
@@ -66,15 +66,6 @@ The result of 5 + 9 + 13 + 17 + 21 + 25 is ${sum}`
 document.getElementById("display2").innerHTML = `The result of 3 * 6 * 9 * 12 * 15 * 18 is ${fn1}
 The result of 3 + 6 + 9 + 12 + 15 + 18 is ${sumWhile}`
 
-// example from notes 
-// var x = 0 
-// var sum = 0 
-//  while (x < 10){ 
-//    x = 1 + x
-//    sum = x + sum
-//  console.log(x,sum)
-//  }
-// jquery ui draggable object
 $(function(){
     $("#draggable").draggable();
 })
