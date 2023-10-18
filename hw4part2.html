@@ -32,7 +32,7 @@ for(r = 5; r <= 7;r++){
     let amount = 1000;
     
 for(var n = 1; n <= 5; n++){
-    let percent = r  / 100 // changes the interest rate to percentage
+    let percent = r / 100 // changes the interest rate to percentage
     amount = amount * (1 + percent),n;
     var amountDollar = amount.toLocaleString("en-US", {style: "currency", currency: "USD"});
     outputHtml += "<tr><td>" + n + "<td> " + amountDollar + "</td><td> " + r +"</td></tr>"
