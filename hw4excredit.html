@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Credit HW4</title>
+</head>
+<body>
+<h1>Extra Credit for HW4</h1>
+<form>
+    <input type = "number" id = "number">
+    <input type = "button" value = "process" onclick = "process()">
+    <input type = "button" value = "clear" onclick = "window.location.reload()">
+</form>
+
+<div id="output"></div>
+
+<script>
+// var sqaure = ""
+
+function process (){
+    var sqaure = ""
+
+    for(let i = 2; i <= 10; i ){
+        sqaure += "*"
+    }
+    document.getElementById("output").innerHTML = sqaure;
+    }
+    
+
+</script>
+</body>
+</html> 
