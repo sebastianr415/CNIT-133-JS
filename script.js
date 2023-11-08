@@ -54,7 +54,9 @@ for(var j = 0; j < stateInfo[i].length; j++ ){
 stateInfo[i][j] = stateInfo[i][j].toUpperCase();
 }
 if(!stateInfo){
-    console.log("")
+    document.getElementById("output").innerHTML = `sorry`
+}else{
+    document.getElementById("output").innerHTML = `You in luck`
 }
 }
 
