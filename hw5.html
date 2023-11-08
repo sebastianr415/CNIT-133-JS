@@ -28,52 +28,57 @@ TIP: when building radio buttons and checkboxes in HTML, make sure that the name
 an input text box so the user will enter his/her full name
 a group of radio buttons so the user will select his age group (less than 21; between 21 and 50; older than 50) 
 -->
-<form>
-  <label for = "fullName">Full Name:</label>
-  <input type = "text" id = "fName1" placeholder = "Full Name"><br>
-  <p id = "fName"></p>
-<!--   <p>Age:</p>
-  <input type = "radio" id = "age1" name = "age" value = "21">
-  <label for = "age1"> less than 21</label>
-  <input type = "radio" id = "age2" name = "age" value = "50">
-  <label for = "age2"> between 21 and 50</label>
-  <input type = "radio" id = "age3" name = "age" value = "over">
-  <label for = "age3"> over 50</label><br> -->
+<form >
+<label for = "fName1">Full Name:</label>
+<input type = "text" id = "fName1" placeholder = "Full Name"><br>
+<p id = "fName"></p>
+<p>Age:</p>
+<label for = "age1" > less than 21
+<input type = "radio" id = "age1" name = "age" >
+</label>
+<label for = "age2"> between 21 and 50
+<input type = "radio" id = "age2" name = "age">
+</label>
+<label for = "age3"> over 50
+<input type = "radio" id = "age3" name = "age">
+</label> <br>
 <!--  
 a group of checkboxes so the user will select the browsers he/she has used (Firefox, Edge, Chrome, Safari)  
 -->
-<!--   <p>Browsers:</p>
-  <label for = "browser">Firefox</label>
-  <input type = "checkbox" id = "browser1" name = "browser" value = "firefox">
-  <label for = "browser">Edge</label>
-  <input type = "checkbox" id = "browser2" name = "browser" value = "edge">
-  <label for = "browser">Chrome</label>
-  <input type = "checkbox" id = "browser3" name = "browser" value = "chrome">
-  <label for = "browser">Safari</label>
-  <input type = "checkbox" id = "browser4" name = "browser" value = "Safari">
-  <br><br> -->
-  <!-- 
+<p>Browsers:</p><br>
+<label for = "browser1">Firefox</label>
+<input type = "checkbox" id = "browser1" name = "checkbox" value = "firefox">
+<label for = "browser2">Edge</label>
+<input type = "checkbox" id = "browser2" name = "checkbox" value = "edge">
+<label for = "browser3">Chrome</label>
+<input type = "checkbox" id = "browser3" name = "checkbox" value = "chrome">
+<label for = "browser4">Safari</label>
+<input type = "checkbox" id = "browser4" name = "checkbox" value = "Safari">
+<br><br>
+<!-- 
 a select element or datalist (to produce a drop-down list of choices) so the user will select which type of movie he/she prefers (Action, Comedy, Drama, Documentary, Science Fiction) 
 -->
-<!--   <select name = "movieList">
-  <option>Movie options:</option>
-  <option>Action</option>
-  <option>Comedy</option>
-  <option>Drama</option>
-  <option>Documentary</option>
-  <option>Science Fiction</option>
- </select>
-  <br><br> -->
-  
+<select id = "movieItems" name = "movieList">
+<option>Movie options:</option>
+<option value = "Action" >Action</option>
+<option value="Comedy" >Comedy</option>
+<option value="Drama">Drama</option>
+<option value = "Documentary">Documentary</option>
+<option value = "Science Fiction">Science Fiction</option>
+</select>
+<br><br>
+
 <!--
 a button to submit the form
 a button to clear the form
 a div or paragraph element that will serve as the output/result area (it can be outside the form) -->
- <input type = "submit" value = "SUBMIT" onclick = "onSubmit()">
- <input type = "reset" value = "RESET"> 
+<div id = "output"></div>
+<button type = "button" value = "SUBMIT" onclick = "onSubmit(this.form)">Submit</button>
+<button type = "button" value = "RESET" onclick = "window.location.reload()">reset</button>
 </form>
 
-<div id = "output"></div>
+
+<!-- part 2  -->
 
 <script src = "script.js"></script>
 
