@@ -27,8 +27,8 @@ window.open(myDestination2);
 }
 
 // part 3
-function stateName (){
 
+function stateNames(){
 const stateInfo = [
     {StateAbbr: "al",Statename: "alabama", Capital: "montgomery", population: "4,903,185"},
     {StateAbbr: "ak",Statename: "alaska", Capital: "juneau", population: "731,545"},
@@ -40,16 +40,22 @@ const stateInfo = [
 // Transform the input of the user and the data you are comparing to either to uppercase or to lowercase so you can compare 
 // "banana with banana"! Using the toLowerCase() or toUpperCase() methods.
 var inputValue = document.getElementById("nameOfState").value
-var inputValueUppercase = inputValue.toUpperCase()
-var inputValueLowercase =inputValue.toLowerCase()
 
-if(inputValueUppercase != userInputAbbr && userInputState){
-    console.log("wrong")
-}else {console.log("right")}
-for(var i = 0; i < stateInfo.length; i++){
-for(var j = 0; j < stateInfo[i].length; j++ ){
-stateInfo[i][j] = stateInfo[i][j].toUpperCase();
-}}
+stateInfo.forEach(info => {
+    const stateNameLowerCase = info.Statename.toLowerCase()
+    const stateNameUpperCase = info.Statename.toUpperCase()
+    if(inputValue === stateNameLowerCase || stateNameUpperCase){
+        console.log(`state abbreviation for given state: ${info.StateAbbr}`)
+    } return ;
+})
+
+// if(inputValueUppercase != userInputAbbr && userInputState){
+//     console.log("wrong")
+// }else {console.log("right")}
+// for(var i = 0; i < stateInfo.length; i++){
+// for(var j = 0; j < stateInfo[i].length; j++ ){
+// stateInfo[i][j] = stateInfo[i][j].toUpperCase();
+// }}
 // console.log(userInputState);
 // if(inputValue == userInputAbbr || userInputState){
 //     console.log("correct")
