@@ -80,12 +80,76 @@ stateInfo.forEach(info => {
 // round the floating-point number to the nearest thousandths position
 // You will then present in the output/result area the original number typed by the user and the results you found for each calculation requested above
 function onSubmit() {
-{  var inputNum = document.getElementById("inputs").value;
-var numRegex = /\d{3}/;
+var inputNum = document.getElementById("inputs").value;
+var numRegex = /^\d*\.\d{4,}$/;
+
 if (!numRegex.test(inputNum)) {
-document.getElementById("textArea").innerHTML =
+document.getElementById("textarea").innerHTML =
     "Numbers needs atleast 4 decimal positions no less than that";
-} else {
-console.log("valid decimal positon");
+} else if(numRegex.test(inputNum)){
+var y  = Math.round(inputNum)
+var squareRoot = Math.sqrt(Math.round(inputNum))
+var roundTenths = Math.floor(inputNum * 10 + .5) /10
+var roundHundreds = Math.floor(inputNum * 100 + .5) / 100
+var roundThousands = Math.floor(inputNum * 1000 + .5) / 1000 
+document.getElementById("textarea").innerHTML = `you typed ${parseFloat(inputNum)}
+Rounded to the Nearest Integer = ${y}
+Square root rounded to integer = ${squareRoot}
+Rounded to the nearest 10th position = ${roundTenths}
+Rounded to the nearest 100th positon = ${roundHundreds}
+Rounded to the nearest 1000nd postion = ${roundThousands}
+`;
 }
-}}
+}
+//Ending of part 1 hw6
+
+//beggining of part 2 hw6
+function clickOn(){
+{var count = 0 ;
+var oneLetter = document.getElementById("oneLetterInput").value.toLowerCase().charAt(0)
+var oneLetter = oneLetter.toLowerCase()
+
+var stringToSearch = document.getElementById("longContent").value
+var stringToSearch = stringToSearch.toLowerCase()
+
+
+for(i=0; i < stringToSearch.length;i++){
+if(stringToSearch.charAt(i) == oneLetter)
+count++
+}
+if(count == 0){
+var newWindow = window.open("","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=300,width=300,height=100")
+newWindow.document.write("<p>Search character " + oneLetter + " is not found in the content you typed</p>" + 
+"<br><button type = button onclick = closeWindow()>Close</button>" + "<br><script>function closeWindow(){window.close()}</script>")
+const inputElement = document.getElementById("outputBox")
+inputElement.value = ""
+}
+else {document.getElementById("outputBox").value=count + 
+" occurrence(s) of " + oneLetter + " found" }
+
+}
+}
+
+// script for hw6 part 3
+
+function numFun (){
+    var phoneNumber = document.getElementById("phoneNumber").value
+    var phoneRegex = /^\((\d{3})\)(\d{3})-(\d{4})$/
+
+    if(!phoneRegex.test(phoneNumber)){
+        document.getElementById("errorMsg").innerHTML = "Please enter the phone number in the format (999)999-9999"
+        return
+}
+const phoneArray = phoneNumber.match(/^\((\d{3})\)(\d{3})-(\d{4})$/)
+const areaCode = phoneArray[1];
+const firstThree = phoneArray[2]
+const lastFour = phoneArray[3]
+
+document.getElementById("areaCode").value = areaCode
+document.getElementById("firstThree").value = firstThree
+document.getElementById("lastFour").value = lastFour
+}
+
+// jquery extra credit
+$('input[name = "phoneNumber"]').mask('(000)000-0000');
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = " https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <link rel = "stylesheet" href = "styles.css">
+    <title>Homework 6 pt 3</title>
+</head>
+<body>
+<h1>Homework 6 part 3</h1>
+<li>
+    <a href = "index.html">Home</a>
+</li>
+<li>
+    <a href = "hw6.html">Homework 6 part 1 </a>
+</li>
+<li>
+    <a href="hw6part2.html">Homework 6 part 2</a>
+</li>
+<li>
+    <a href="hw6part3.html">Homework 6 part 3</a>
+</li>
+
+<form>
+<label for = "phoneNumber">Phone Number:
+    <input type = "text" id = "phoneNumber" name = "phoneNumber" placeholder="(999)999-9999" data-mask = "(000)000-0000">
+</label>
+<label for="areaCode">Area Code:
+    <input type = "text" id = "areaCode" name = 'areaCode' readonly>
+</label>
+<label for="firstThree"> First three numbers:
+    <input type = "firsThree" id = "firstThree" name = "firstThree" readonly>
+</label>
+<label for="lastFour"> Last four numbers:
+    <input type = "lastFour" id = "lastFour" name = "lastFour" readonly>
+</label>
+<label for="startBtn">
+    <button type = "button" id= "startBtn" name = "startBtn" onclick = "numFun()">START</button>
+</label>
+<label for = "reset">
+    <input type = "reset" id = "reset"  value = "RESET"onclick = "window.location.reload()">
+</label>
+<label for = "errorMsg"> Message:
+    <div id = "errorMsg"></div>
+</label>
+</form>
+<script src = "script.js"></script>
+</body>
+</html>

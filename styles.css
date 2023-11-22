@@ -51,9 +51,11 @@ input {
 
 form {
     display:flex;
-    flex-direction:column
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
 }
-/* homework 3 css */
+/* homework 3 css *
 /* label{
     padding-top:5rem;
 } */
@@ -90,4 +92,22 @@ tr:nth-child(even){
 tr:nth-child(odd){
     background-color:#F9FF00;
     color:#000;
+}
+
+/* hw6 */
+#content {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#longContent{
+    border: 2px dotted red;
+}
+.listItems {
+    display:center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
