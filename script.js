@@ -83,6 +83,7 @@ function onSubmit() {
 var inputNum = document.getElementById("numInputs").value;
 var numRegex = /^\d*\.\d{4,}$/;
 
+
 if (!numRegex.test(inputNum)) {
 document.getElementById("textarea").innerHTML =
     "Numbers needs atleast 4 decimal positions no less than that";
@@ -92,14 +93,18 @@ var squareRoot = Math.sqrt(Math.round(inputNum))
 var roundTenths = Math.floor(inputNum * 10 + .5) /10
 var roundHundreds = Math.floor(inputNum * 100 + .5) / 100
 var roundThousands = Math.floor(inputNum * 1000 + .5) / 1000 
-document.getElementById("textarea").innerHTML = `you typed ${parseFloat(inputNum)}
+document.getElementById("textArea").innerHTML = `you typed ${parseFloat(inputNum)}
 Rounded to the Nearest Integer = ${y}
 Square root rounded to integer = ${squareRoot}
 Rounded to the nearest 10th position = ${roundTenths}
 Rounded to the nearest 100th positon = ${roundHundreds}
-Rounded to the nearest 1000nd postion = ${roundThousands}
-`;
+Rou nded to the nearest 1000nd postion = ${roundThousands}`;
+} 
+
 }
+function eraseText(){
+document.getElementById("textArea").value = ""
+document.getElementById("numInputs").value = ""
 }
 //Ending of part 1 hw6
 
