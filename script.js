@@ -80,7 +80,7 @@ stateInfo.forEach(info => {
 // round the floating-point number to the nearest thousandths position
 // You will then present in the output/result area the original number typed by the user and the results you found for each calculation requested above
 function onSubmit() {
-var inputNum = document.getElementById("inputs").value;
+var inputNum = document.getElementById("numInputs").value;
 var numRegex = /^\d*\.\d{4,}$/;
 
 if (!numRegex.test(inputNum)) {
