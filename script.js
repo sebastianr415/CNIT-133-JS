@@ -114,7 +114,7 @@ function clickOn(){
 var oneLetter = document.getElementById("oneLetterInput").value.toLowerCase().charAt(0)
 var oneLetter = oneLetter.toLowerCase()
 
-var stringToSearch = document.getElementById("longContent").value
+var stringToSearch = document.getElementById("textContent").value
 var stringToSearch = stringToSearch.toLowerCase()
 
 
@@ -129,7 +129,7 @@ newWindow.document.write("<p>Search character " + oneLetter + " is not found in 
 const inputElement = document.getElementById("outputBox")
 inputElement.value = ""
 }
-else {document.getElementById("outputBox").value=count + 
+else {document.getElementById("outputBox").value = count + 
 " occurrence(s) of " + oneLetter + " found" }
 
 }
