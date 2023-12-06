@@ -138,15 +138,19 @@ else {document.getElementById("outputBox").value = count +
 // script for hw6 part 3
 
 function numFun (){
-    var phoneNumber = document.getElementById("phoneNumber").value
-    var phoneRegex = /^\((\d{3})\)(\d{3})-(\d{4})$/
+var phoneNumber = document.getElementById("phoneNumber").value
+var phoneRegex = /^\((\d{3})\)(\d{3})-(\d{4})$/
 
-    if(!phoneRegex.test(phoneNumber)){
-        document.getElementById("errorMsg").innerHTML = "Please enter the phone number in the format (999)999-9999"
-        return
+if(!phoneRegex.test(phoneNumber)){
+document.getElementById("areaCode").value = ""
+document.getElementById("firstThree").value = ""
+document.getElementById("lastFour").value = ""
+document.getElementById("errorMsg").innerHTML = "Please enter the phone number in the format (999)999-9999"
+return
 }
+
 const phoneArray = phoneNumber.match(/^\((\d{3})\)(\d{3})-(\d{4})$/)
-const areaCode = phoneArray[1];
+const areaCode = phoneArray[1]
 const firstThree = phoneArray[2]
 const lastFour = phoneArray[3]
 
