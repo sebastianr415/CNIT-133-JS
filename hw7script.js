@@ -39,3 +39,16 @@ fontSizeSelect.addEventListener('change', updateFontSize);
 updateBackgroundColor();
 updateFontStyle();
 updateFontSize();
+
+
+
+    const homework7Dropdown = document.getElementById('homework7Dropdown');
+    const homework7DropdownContent = document.getElementById('homework7DropdownContent');
+
+    homework7Dropdown.addEventListener('mouseover', () => {
+      homework7DropdownContent.style.display = 'block';
+    });
+
+    homework7Dropdown.addEventListener('mouseout', () => {
+      homework7DropdownContent.style.display = 'none';
+    });
