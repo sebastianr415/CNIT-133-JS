@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
-    Links to an external site."></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+    Links to an external site."></script> -->
     <link rel="stylesheet" href="hw7styles.css">
     <title>JS-HW7</title>
 </head>
@@ -16,26 +16,73 @@
     <ul>
         <li><a href="index.html">home</a></li>
     </ul>
+  <main>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed enim eget quam posuere mollis. Donec at felis in enim eleifend semper.</p>
+
+    <p>Morbi eget magna ut turpis mollis luctus. Fusce vitae eros sit amet urna scelerisque faucibus at eget lorem. Etiam ac enim vel quam suscipit iaculis.</p>
+
+    <p>Donec ultrices, eros ac auctor aliquam, eros eros ultricies quam, id ultricies diam mauris quis mi.</p>
+  </main>
+
+  <form>
+    <fieldset>
+      <legend>Background Color</legend>
+      <label><input type="radio" name="background-color" value="orange" checked> Orange</label>
+      <br>
+      <label><input type="radio" name="background-color" value="lightgreen"> Green</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Font Style</legend>
+      <label><input type="checkbox" name="font-style" value="underline"> Underline</label>
+      <br>
+      <label><input type="checkbox" name="font-style" value="bold"> Bold</label>
+      <br>
+      <label><input type="checkbox" name="font-style" value="italic"> Italic</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Font Size</legend>
+      <select name="font-size">
+        <option value="1em">1em</option>
+        <option value="1.2em">1.2em</option>
+        <option value="1.5em">1.5em</option>
+      </select>
+    </fieldset>
+  </form>
+
+  <a href="homework7.html">Go back to Homework 7</a>
+    <!-- <main>
+        <p>this my first paragraph</p>
+        <p> this is my second paragraph</p>
+        <p>this is my third paragraph</p>
+    </main>
 
 <form>
+    <fieldset>
 <label for = "color1"> Color #1
-    <input type = "radio" id = "color1">
+    <input type = "radio" name = "color" id = "color1" checked>
 </label>
 <label for = "color2">Color #2
-    <input type = "radio" id = "color2">
+    <input type = "radio" name = "color" id = "color2">
 </label>
+</fieldset>
+
+<fieldset>
 <label for = "checkbox1">underline
-    <input type = "checkbox" id = "checkbox1">
+    <input type = "checkbox" name="font-style" id = "checkbox1">
 </label>
 <label for = "checkbox2">bold
-    <input type = "checkbox" id = "checkbox2">
+    <input type = "checkbox" name="font-style" id = "checkbox2">
 </label>
 <label for = "checkbox3">italic
-    <input type = "checkbox" id = "checkbox3">
+    <input type = "checkbox" name="font-style" id = "checkbox3">
 </label>
+</fieldset>
+
 
 <label for = "fontSizes"> Font-sizes
-    <select name = "fontSizes"id = "fontSizes">
+    <select name = "fontSizes" name = "fontSizes"id = "fontSizes">
     <option value = "16px">16px</option>
     <option value = "32px">32px</option>
     <option value = "48px">48px</option>
@@ -43,8 +90,8 @@
 </label>
 </form>
 
-<a href = "hw7.html">Homework 7 </a>
-<div id = "styles"></div>
-<script src = "script.js"></script>
+<a href = "hw7.html">go back Homework 7 </a> -->
+
+<script src = "hw7script.js"></script>
 </body>
 </html>
