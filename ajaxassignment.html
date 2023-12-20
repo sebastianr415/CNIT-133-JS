@@ -44,6 +44,37 @@ function myFunction(xml) {
   document.getElementById("demo").innerHTML = table;
 }
 </script>
+<h2>Explanation of AJAX</h2>
+<p>The loadDoc funciton creates an varible called xhttp storing a request to a server.
+  Then a callback function when the data is loaded to the function myfunction(). After sends a request with the open method using  GET request
+  from the xml file. Finally sends method to comeplete the request from the server.
+</p>
 
+<p>
+  The function myFunction resolves the xml response retrieving data from the server. Inside the constant x is to get a list of all the CD elements.
+  Inside the varible table is html table being created. After the table, a for loop iterates through each cd element in the list and extracts the artist and title
+  information using the tagname and childnodes. Finally, the table variable is assigned to the innerhtml property.
+</p>
+
+<h2>Rest API</h2>
+<p>Hello dev team,
+<br>
+I'm excited to present a weather API that has the potential to significantly enhance the value and capabilities of our
+products: <a href = "https://apilist.fun/api/tomorrow.io-weather-ap">Tomorrow.io Weather API.</a>  This API offers unparalleled accuracy, granularity, 
+and coverage, making it ideal for integrating weather-driven features and insights into our applications.
+</p>
+
+<p>Hyper-Accurate Data: Leverages a blend of traditional sources, new sensing technologies, and proprietary modeling to deliver best-in-class weather data, ensuring the most precise and reliable information for our users.
+Global Coverage with High Resolution: Provides data for any location worldwide, with granularity down to minute-by-minute forecasts and hyperlocal observations. This level of detail is unmatched in the industry.
+Extensive Data Layers: Offers over 80 data layers, covering everything from temperature and precipitation to lightning strikes and air quality, empowering us to create a diverse range of weather-centric features.
+Frequent Updates: Forecasts are updated every 15 minutes, ensuring our applications always reflect the most current weather conditions.</p>
+<p>
+  Response Format: Data is delivered in JSON format, easily parsed and integrated into our existing codebase.
+Authentication: Requires an API key for access, which can be obtained for free from Tomorrow.io.
+Pricing: While a free plan is available, I recommend exploring paid plans for higher usage limits and access to premium features. These plans are typically charged based on API calls or data usage.
+Documentation: Comprehensive developer documentation is available here: <a href ="https://docs.tomorrow.io/reference/welcome">Access Tomorrow.io API Documentation.</a>
+</p>
+<p>The Tomorrow.io Weather API presents a compelling opportunity to advance our product offerings and create distinctive value for our users. I strongly urge the development team to explore its capabilities and consider integration into our upcoming projects.
+Feel free to reach out for further discussions or assistance as needed</p>
 </body>
 </html>
